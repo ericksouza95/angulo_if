@@ -1,0 +1,24 @@
+<div class="input-group mb-3">
+    <span class="input-group-text">$</span>
+    <span class="input-group-text">0.00</span>
+    <input 
+      type="number" 
+      class="form-control" 
+      aria-label="Dollar amount (with dot and two decimal places)" 
+      [(ngModel)]="inputValue">
+  </div>
+
+  
+  <!-- Alertas Bootstrap -->
+  <div *ngIf="inputValue >= 1 && inputValue <= 100" class="alert alert-danger" role="alert">
+    Pobre
+  </div>
+  
+  <div *ngIf="inputValue > 100 && inputValue <= 100000" class="alert alert-success mt-3" role="alert">
+    Bacana
+  </div>
+  
+  <div *ngIf="inputValue > 100000" class="alert alert-warning mt-3" role="alert">
+    Rico
+  </div>
+  
